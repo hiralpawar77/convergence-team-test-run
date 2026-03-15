@@ -51,6 +51,5 @@ It's one file so I'll just describe what's in the `<script>` block:
 ## Things we want to add eventually
 - [ ] Touch controls for mobile
 - [ ] Sound effects
-- [ ] Save high score to localStorage
 - [ ] Night mode
 - [ ] More cities
