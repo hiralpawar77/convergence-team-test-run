@@ -9,8 +9,6 @@
 *{margin:0;padding:0;box-sizing:border-box}
 html,body{background:#07050f;overflow:hidden;font-family:'Nunito',sans-serif}
 #gc{width:100vw;height:100vh;position:relative}
-
-/* ══ HUD ══ */
 #hud{position:absolute;top:0;left:0;right:0;z-index:10;pointer-events:none;
   display:flex;gap:8px;padding:12px 14px;align-items:flex-start}
 .hc{background:rgba(7,5,15,0.6);backdrop-filter:blur(16px);
@@ -23,8 +21,6 @@ html,body{background:#07050f;overflow:hidden;font-family:'Nunito',sans-serif}
 #livrow{display:flex;gap:3px;justify-content:center;margin-top:2px}
 .lv{font-size:14px;transition:all .3s;display:inline-block}
 .lv.x{filter:grayscale(1);opacity:.18;transform:scale(.72)}
-
-/* ══ Mission bar ══ */
 #mbar{position:absolute;bottom:14px;left:50%;transform:translateX(-50%);
   z-index:10;pointer-events:none;
   background:rgba(7,5,15,0.68);backdrop-filter:blur(18px);
@@ -45,11 +41,7 @@ html,body{background:#07050f;overflow:hidden;font-family:'Nunito',sans-serif}
   background:rgba(255,255,255,0.07);border-radius:4px;overflow:hidden}
 #mpfill{height:100%;width:0%;border-radius:4px;
   background:linear-gradient(90deg,#86efac,#38bdf8);transition:width .4s ease}
-
-/* ══ Speedo ══ */
 #speedo{position:absolute;bottom:78px;right:14px;z-index:10;pointer-events:none;width:92px;height:92px}
-
-/* ══ Minimap ══ */
 #mm{position:absolute;bottom:78px;left:14px;z-index:10;
   width:98px;height:122px;border-radius:16px;overflow:hidden;
   background:rgba(7,5,15,0.72);border:1px solid rgba(255,255,255,0.1)}
@@ -57,8 +49,6 @@ html,body{background:#07050f;overflow:hidden;font-family:'Nunito',sans-serif}
 #mm .mml{position:absolute;bottom:4px;left:0;right:0;text-align:center;
   font-size:7px;letter-spacing:1.5px;font-weight:700;
   color:rgba(255,255,255,.2);text-transform:uppercase}
-
-/* ══ Toast ══ */
 #toast{position:absolute;top:74px;left:50%;
   transform:translateX(-50%) translateY(-4px);
   z-index:20;pointer-events:none;opacity:0;transition:opacity .25s,transform .25s}
@@ -67,14 +57,10 @@ html,body{background:#07050f;overflow:hidden;font-family:'Nunito',sans-serif}
   background:rgba(7,5,15,0.92);backdrop-filter:blur(14px);
   border:1px solid rgba(255,255,255,0.1);border-radius:50px;
   padding:8px 20px;font-size:13px;font-weight:700;color:#fff}
-
-/* ══ Combo ══ */
 #combo{position:absolute;top:74px;right:14px;z-index:10;pointer-events:none;
   font-family:'Fredoka One',cursive;font-size:18px;color:#fde68a;
   opacity:0;transform:scale(0.65) translateY(6px);transition:opacity .22s,transform .22s}
 #combo.on{opacity:1;transform:scale(1) translateY(0)}
-
-/* ══ Coin floats ══ */
 .cf{position:absolute;z-index:30;pointer-events:none;
   font-family:'Fredoka One',cursive;font-size:22px;color:#fde68a;
   text-shadow:0 2px 10px rgba(245,158,11,.7);
@@ -82,8 +68,6 @@ html,body{background:#07050f;overflow:hidden;font-family:'Nunito',sans-serif}
 @keyframes cfA{0%{opacity:1;transform:translateY(0) scale(1)}
   65%{opacity:1;transform:translateY(-54px) scale(1.18)}
   100%{opacity:0;transform:translateY(-86px) scale(.7)}}
-
-/* ══ Level pop ══ */
 #lvlpop{position:absolute;top:50%;left:50%;
   transform:translate(-50%,-50%) scale(0);z-index:30;pointer-events:none;
   background:linear-gradient(135deg,#f59e0b,#ec4899);
@@ -93,13 +77,7 @@ html,body{background:#07050f;overflow:hidden;font-family:'Nunito',sans-serif}
 #lvlpop.on{transform:translate(-50%,-50%) scale(1);opacity:1}
 #lvlpop .lt{font-family:'Fredoka One',cursive;font-size:32px;color:#fff}
 #lvlpop .ls{font-size:12px;font-weight:700;color:rgba(255,255,255,.8);margin-top:4px}
-
-/* ══ Flash ══ */
 #fl{position:absolute;inset:0;z-index:28;pointer-events:none;opacity:0;transition:opacity .1s}
-
-/* ════════════════════════════════════════════
-   START SCREEN
-   ════════════════════════════════════════════ */
 #ss{position:absolute;inset:0;z-index:40;
   display:flex;flex-direction:column;align-items:center;justify-content:center;
   color:#fff;text-align:center;
@@ -116,8 +94,6 @@ html,body{background:#07050f;overflow:hidden;font-family:'Nunito',sans-serif}
 .scard .sk{font-size:8px;font-weight:800;letter-spacing:2.5px;
   color:rgba(255,255,255,.26);text-transform:uppercase;margin-bottom:8px}
 .scard .sv{font-size:12px;font-weight:700;color:rgba(255,255,255,.62);margin-top:4px}
-
-/* shared buttons */
 .btn{font-family:'Fredoka One',cursive;border:none;cursor:pointer;
   transition:transform .12s,filter .12s;letter-spacing:.5px}
 .btn:hover{transform:scale(1.06);filter:brightness(1.12)}
@@ -130,16 +106,11 @@ html,body{background:#07050f;overflow:hidden;font-family:'Nunito',sans-serif}
   box-shadow:0 8px 28px rgba(59,130,246,.35);margin:5px}
 .btn.ghost{background:rgba(255,255,255,.08);border:1.5px solid rgba(255,255,255,.16);
   color:rgba(255,255,255,.7);padding:11px 32px;border-radius:50px;font-size:15px;margin:5px}
-
-/* ════════════════════════════════════════════
-   END SCREEN — full cinematic overlay
-   ════════════════════════════════════════════ */
 #endScreen{
   position:absolute;inset:0;z-index:50;
   display:none;
   flex-direction:column;align-items:center;justify-content:flex-end;
   padding-bottom:36px;
-  /* game world still renders behind — gradient fades it */
   background:linear-gradient(180deg,
     rgba(7,5,15,0.05) 0%,
     rgba(7,5,15,0.3) 20%,
@@ -147,16 +118,12 @@ html,body{background:#07050f;overflow:hidden;font-family:'Nunito',sans-serif}
     rgba(7,5,15,0.97) 58%,
     rgba(7,5,15,1.0) 100%)
 }
-
-/* confetti layer stays behind card */
 #confL{position:absolute;inset:0;pointer-events:none;z-index:0;overflow:hidden}
 .confP{position:absolute;border-radius:2px;animation:confFall linear forwards}
 @keyframes confFall{
   0%{opacity:1;transform:translateY(-20px) rotate(0deg)}
   100%{opacity:0;transform:translateY(105vh) rotate(720deg)}
 }
-
-/* burst stars from centre */
 #burst{position:absolute;top:38%;left:50%;pointer-events:none;z-index:1}
 .bst{position:absolute;border-radius:50%;
   animation:bstOut .85s ease-out forwards}
@@ -165,8 +132,6 @@ html,body{background:#07050f;overflow:hidden;font-family:'Nunito',sans-serif}
   55%{opacity:1}
   100%{opacity:0;transform:translate(var(--tx),var(--ty)) scale(1.4)}
 }
-
-/* ─── result card ─── */
 #rc{
   position:relative;z-index:2;
   width:min(380px,92vw);
@@ -180,8 +145,6 @@ html,body{background:#07050f;overflow:hidden;font-family:'Nunito',sans-serif}
   from{opacity:0;transform:translateY(70px) scale(.92)}
   to{opacity:1;transform:translateY(0) scale(1)}
 }
-
-/* top gradient banner */
 #rcBanner{
   padding:26px 24px 20px;text-align:center;position:relative;
   background:linear-gradient(135deg,rgba(245,158,11,.22),rgba(236,72,153,.22));
@@ -195,16 +158,12 @@ html,body{background:#07050f;overflow:hidden;font-family:'Nunito',sans-serif}
 @keyframes emBounce{0%{transform:scale(0) rotate(-18deg)}65%{transform:scale(1.22) rotate(5deg)}100%{transform:scale(1) rotate(0)}}
 #rcPassName{font-family:'Fredoka One',cursive;font-size:22px;color:#fff;line-height:1;margin-bottom:3px}
 #rcPassType{font-size:10px;font-weight:800;letter-spacing:2.5px;text-transform:uppercase;color:rgba(255,255,255,.38)}
-
-/* new best ribbon */
 #rcBest{display:none;position:absolute;top:14px;right:14px;
   background:linear-gradient(135deg,#f59e0b,#ef4444);
   border-radius:50px;padding:3px 12px;
   font-size:9px;font-weight:800;letter-spacing:1px;color:#fff;text-transform:uppercase;
   animation:bestPop .4s .7s cubic-bezier(.34,1.56,.64,1) both}
 @keyframes bestPop{from{opacity:0;transform:scale(0)}to{opacity:1;transform:scale(1)}}
-
-/* fare earned */
 #rcBody{padding:20px 24px 18px;text-align:center}
 #rcFareLbl{font-size:9px;font-weight:800;letter-spacing:2.5px;text-transform:uppercase;
   color:rgba(255,255,255,.32);margin-bottom:4px}
@@ -213,19 +172,13 @@ html,body{background:#07050f;overflow:hidden;font-family:'Nunito',sans-serif}
   animation:fareIn .65s .3s ease both}
 @keyframes fareIn{from{opacity:0;transform:scale(.65)}to{opacity:1;transform:scale(1)}}
 #rcFareSub{font-size:11px;font-weight:700;color:rgba(255,255,255,.32);margin-top:2px;margin-bottom:18px}
-
-/* stats row */
 #rcStats{display:flex;gap:8px;justify-content:center;margin-bottom:20px}
 .rst{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.09);
   border-radius:14px;padding:9px 14px;flex:1;text-align:center}
 .rsk{font-size:8px;font-weight:800;letter-spacing:2px;text-transform:uppercase;
   color:rgba(255,255,255,.28);margin-bottom:3px}
 .rsv{font-family:'Fredoka One',cursive;font-size:20px;color:#fff}
-
-/* buttons */
 #rcBtns{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;padding:0 4px 4px}
-
-/* streak indicator */
 #rcStreak{
   display:flex;align-items:center;justify-content:center;gap:6px;
   padding:9px 0 6px;border-top:1px solid rgba(255,255,255,0.08);
@@ -235,8 +188,6 @@ html,body{background:#07050f;overflow:hidden;font-family:'Nunito',sans-serif}
 </head>
 <body>
 <div id="gc">
-
-<!-- HUD -->
 <div id="hud">
   <div class="hc"><div class="hl">Score</div><div class="hv y" id="hSc">0</div></div>
   <div class="hc"><div class="hl">Fare</div><div class="hv g" id="hFr">₹0</div></div>
@@ -250,9 +201,7 @@ html,body{background:#07050f;overflow:hidden;font-family:'Nunito',sans-serif}
       <span class="lv" id="lv3">❤️</span>
     </div>
   </div>
-</div>
-
-<!-- Mission bar -->
+</div> 
 <div id="mbar">
   <div class="mico" id="mico">🛺</div>
   <div class="mtxt">
@@ -263,22 +212,17 @@ html,body{background:#07050f;overflow:hidden;font-family:'Nunito',sans-serif}
   <div class="mf" id="mfare"></div>
 </div>
 <div id="mpbar"><div id="mpfill"></div></div>
-
 <div id="toast"><div id="toastB"><span id="toastT">Nice!</span></div></div>
 <div id="combo">🔥 x2</div>
 <div id="speedo"><canvas id="spC" width="184" height="184"></canvas></div>
 <div id="mm"><canvas id="mmC" width="98" height="122"></canvas><div class="mml">map</div></div>
 <div id="lvlpop"><div class="lt" id="lvlt">LEVEL 2 🎉</div><div class="ls" id="lvls">Traffic picks up!</div></div>
 <div id="fl"></div>
-
-<!-- ═══════════ END SCREEN ═══════════ -->
 <div id="endScreen">
   <!-- confetti layer -->
   <div id="confL"></div>
   <!-- burst stars -->
   <div id="burst"></div>
-
-  <!-- result card -->
   <div id="rc">
     <div id="rcBanner">
       <div id="rcBest">🏆 NEW BEST!</div>
@@ -307,8 +251,6 @@ html,body{background:#07050f;overflow:hidden;font-family:'Nunito',sans-serif}
     </div>
   </div>
 </div>
-
-<!-- ═══════════ START SCREEN ═══════════ -->
 <div id="ss">
   <div style="font-size:68px;margin-bottom:10px;filter:drop-shadow(0 4px 24px rgba(245,158,11,.55))">🛺</div>
   <div class="stit">RICKSHAW RUN</div>
@@ -335,19 +277,14 @@ html,body{background:#07050f;overflow:hidden;font-family:'Nunito',sans-serif}
   </div>
   <button class="btn orange" onclick="startGame()">🚀 Let's Drive!</button>
 </div>
-
-</div><!-- #gc -->
-
+</div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <script>
-// ────────────────── CONSTANTS ──────────────────
 var RW=13,TILE=50,NT=14;
 var RL=[1.2,3.4,5.6];
 var LL=[-1.2,-3.4,-5.6];
 var FAR=-130,NEAR=34;
 var SIG_SPACING=80;
-
-// ────────────────── STATE ──────────────────
 var S,CAM,RDR,CLK,RICK;
 var roadTiles=[],buildMeshes=[];
 var tPool=[],oPool=[],pPool=[];
@@ -360,7 +297,6 @@ var dist=0,inv=0,totalT=0;
 var mission=null,mSpawnT=0;
 var tT=0,oT=0,pT=0,tI=3.5,oI=3,pI=7;
 var M={};
-
 var CAR_C=[0xef4444,0x3b82f6,0x22c55e,0xf59e0b,0xa855f7,0x06b6d4,0xec4899,0x84cc16,0xf97316,0xe11d48,0x0ea5e9];
 var BIK_C=[0x1e293b,0x7c3aed,0xea580c,0x0284c7,0x16a34a,0xd97706];
 var SHT_C=[0xff6b6b,0x6bc5ff,0xffb347,0xb8f5a0,0xd4a0ff,0xff9ff3,0x54a0ff,0xffd93d,0xfca5a5,0x6ee7b7];
@@ -377,8 +313,6 @@ var PTYP=[
 function rc(a){return a[Math.floor(Math.random()*a.length)];}
 function rn(a,b){return a+Math.random()*(b-a);}
 function lm(c){return new THREE.MeshLambertMaterial({color:c});}
-
-// ────────────────── GAME FLOW ──────────────────
 function startGame(){
   document.getElementById('ss').style.display='none';
   if(!RDR) init3D();
@@ -386,8 +320,6 @@ function startGame(){
   gameRunning=true;
   mainLoop();
 }
-
-// Continue: keep all progress, just get next ride
 function continueRide(){
   hideEnd();
   lives=Math.min(3,lives+1); // reward 1 extra life for continuing
@@ -396,28 +328,22 @@ function continueRide(){
   setTimeout(function(){spawnMission();},700);
   mainLoop();
 }
-
-// New game: reset everything
 function restartFull(){
   hideEnd();
   resetState(true);
   gameRunning=true;
   mainLoop();
 }
-
-// Home
 function goHome(){
   hideEnd();
   gameRunning=false;
   document.getElementById('ss').style.display='flex';
 }
-
 function togglePause(){
   if(!gameRunning) return;
   paused=!paused;
   if(!paused) mainLoop();
 }
-
 function resetState(full){
   [...tPool,...oPool,...pPool].forEach(function(o){if(S)S.remove(o.mesh);});
   tPool=[];oPool=[];pPool=[];
@@ -433,7 +359,6 @@ function resetState(full){
   for(var i=0;i<5;i++) spawnO(true);
   updateLives();updateMissionUI();
 }
-
 window.addEventListener('keydown',function(e){
   if(!RDR) return;
   keys[e.key]=true;
@@ -441,8 +366,6 @@ window.addEventListener('keydown',function(e){
   if(e.key==='Escape'||e.key==='p'||e.key==='P') togglePause();
 });
 window.addEventListener('keyup',function(e){keys[e.key]=false;});
-
-// ────────────────── THREE.JS ──────────────────
 function init3D(){
   var c=document.getElementById('gc');
   S=new THREE.Scene();
@@ -474,7 +397,6 @@ function init3D(){
     CAM.updateProjectionMatrix();
   });
 }
-
 function initMats(){
   M.road=lm(0x2a2a2a);M.foot=lm(0xb89a74);M.wht=lm(0xffffff);
   M.yel=lm(0xf59e0b);M.gry=lm(0x888888);M.dkg=lm(0x2e2e2e);
@@ -490,8 +412,6 @@ function initMats(){
   M.my=new THREE.MeshLambertMaterial({color:0xfbbf24,emissive:new THREE.Color(0xf59e0b),emissiveIntensity:0.58});
   M.mg=new THREE.MeshLambertMaterial({color:0x4ade80,emissive:new THREE.Color(0x22c55e),emissiveIntensity:0.58});
 }
-
-// ────────────────── ROAD ──────────────────
 function buildRoad(){
   for(var i=0;i<NT;i++){
     var z=-i*TILE+TILE/2;
@@ -523,8 +443,6 @@ function buildRoad(){
     }
   }
 }
-
-// ────────────────── BUILDINGS ──────────────────
 function buildBuildings(){
   var wm=new THREE.MeshLambertMaterial({color:0xfef9c3});
   for(var z=-165;z<25;z+=9){
@@ -546,7 +464,6 @@ function buildBuildings(){
     });
   }
 }
-
 function buildStreetLamps(){
   for(var z=-165;z<25;z+=20){
     [-1,1].forEach(function(s){
@@ -558,8 +475,6 @@ function buildStreetLamps(){
     });
   }
 }
-
-// ────────────────── SIGNAL ──────────────────
 function buildSignal(){
   var g=new THREE.Group();g.position.z=-45;S.add(g);
   sig.group=g;sig.phase='green';sig.timer=0;sig.worldZ=-45;
@@ -628,8 +543,6 @@ function vehSigBrake(vz,isOnc){
     return 1;
   }
 }
-
-// ────────────────── RICKSHAW ──────────────────
 function buildRickshaw(){
   var g=new THREE.Group();
   var body=new THREE.Mesh(new THREE.BoxGeometry(1.5,0.76,2.44),M.ry);
@@ -652,8 +565,6 @@ function buildRickshaw(){
   });
   return g;
 }
-
-// ────────────────── VEHICLE BUILDERS ──────────────────
 function mkW(g,p,r){
   var w=new THREE.Mesh(new THREE.CylinderGeometry(r,r,0.22,14),M.blk);
   w.rotation.z=Math.PI/2;w.position.set(p[0],p[1],p[2]);g.add(w);
@@ -731,8 +642,6 @@ function mkVendor(x,z){
   var p=mkHuman(0.7,0);p.scale.set(0.84,0.84,0.84);g.add(p);
   g.position.set(x,0,z);return g;
 }
-
-// ────────────────── MARKERS ──────────────────
 function mkMarker(x,z,type){
   var g=new THREE.Group();g.position.set(x,0,z);
   var mat=type==='pick'?M.my:M.mg;
@@ -742,8 +651,6 @@ function mkMarker(x,z,type){
   var ring2=new THREE.Mesh(new THREE.TorusGeometry(1.22,0.05,8,22),mat);ring2.rotation.x=Math.PI/2;ring2.position.y=0.04;g.add(ring2);
   return g;
 }
-
-// ────────────────── SPAWN ──────────────────
 function spawnT(pre){
   var lane=rc(RL),z=pre?-rn(20,115):FAR;
   var types=['car','car','car','car','bike','bike','auto','truck','bus'],t=rc(types),col=rc(CAR_C);
@@ -781,8 +688,6 @@ function spawnP(){
   }
   S.add(mesh);pPool.push({mesh:mesh,spd:spd,w:w,d:d,cx:cx});
 }
-
-// ────────────────── MISSION ──────────────────
 function spawnMission(){
   if(mission) return;
   var pz=RICK.position.z-rn(28,52),px=rc(RL);
@@ -793,7 +698,6 @@ function spawnMission(){
   pickM=mkMarker(px,pz,'pick');S.add(pickM);
   updateMissionUI();
 }
-
 function checkMission(){
   if(!mission) return;
   var rx=RICK.position.x,rz=RICK.position.z;
@@ -824,7 +728,6 @@ function checkMission(){
     }
   }
 }
-
 function updateMissionUI(){
   var ico=document.getElementById('mico'),st=document.getElementById('mstate'),
       nm=document.getElementById('mname'),sb=document.getElementById('msub'),
@@ -849,8 +752,6 @@ function updateMissionUI(){
     pf.style.width=Math.max(0,100-Math.abs(RICK.position.z-mission.dz)*1.3)+'%';
   }
 }
-
-// ────────────────── END SCREEN ──────────────────
 function showEndScreen(m,earned,mul){
   // populate
   document.getElementById('rcEmoji').textContent=m.pt.e;
@@ -877,14 +778,11 @@ function showEndScreen(m,earned,mul){
   spawnConfetti();
   spawnBurst();
 }
-
 function hideEnd(){
   document.getElementById('endScreen').style.display='none';
   clearConfetti();
   document.getElementById('burst').innerHTML='';
 }
-
-// ── confetti ──
 var confIntvl=null;
 function spawnConfetti(){
   clearConfetti();
@@ -930,8 +828,6 @@ function spawnBurst(){
     b.appendChild(div);
   }
 }
-
-// ────────────────── UI HELPERS ──────────────────
 var toastTO=null;
 function toast(msg,col){
   var el=document.getElementById('toast');
@@ -976,8 +872,6 @@ function updateHUD(){
   document.getElementById('hRd').textContent=rides;
   document.getElementById('hLv').textContent=level;
 }
-
-// ────────────────── SPEEDO ──────────────────
 function drawSpeedo(){
   var cv=document.getElementById('spC'),ctx=cv.getContext('2d');
   ctx.clearRect(0,0,184,184);
@@ -998,8 +892,6 @@ function drawSpeedo(){
   ctx.fillStyle='rgba(255,255,255,.3)';ctx.font='bold 9px Nunito,sans-serif';
   ctx.fillText('KM/H',cx,cy+42);
 }
-
-// ────────────────── MINIMAP ──────────────────
 function drawMinimap(){
   var cv=document.getElementById('mmC'),ctx=cv.getContext('2d');
   ctx.clearRect(0,0,98,122);
@@ -1023,8 +915,6 @@ function drawMinimap(){
   ctx.fillStyle='#f5c518';
   ctx.beginPath();ctx.moveTo(cx,by-8);ctx.lineTo(cx-4,by+4);ctx.lineTo(cx+4,by+4);ctx.closePath();ctx.fill();
 }
-
-// ────────────────── COLLISION / CRASH ──────────────────
 function hits(ox,oz,ow,od){
   return Math.abs(RICK.position.x-ox)<(0.76+ow/2)&&Math.abs(RICK.position.z-oz)<(1.24+od/2);
 }
@@ -1037,31 +927,24 @@ function doCrash(){
     setTimeout(function(){spawnMission();},3000);
   }
 }
-
-// ────────────────── MAIN LOOP ──────────────────
 function mainLoop(){
   if(!gameRunning||paused) return;
   requestAnimationFrame(mainLoop);
   var dt=Math.min(CLK.getDelta(),0.05);
   totalT+=dt;
   tickSig(dt);
-
   var stopZ=playerSigStop();
   var maxSpd=stopZ!==null?0.006:0.22;
   if(keys['ArrowUp']  ||keys['w']||keys['W'])       pSpd=Math.min(maxSpd,pSpd+0.007);
   else if(keys['ArrowDown']||keys['s']||keys['S'])  pSpd=Math.max(0,pSpd-0.013);
   else pSpd=Math.max(0,pSpd-0.0038);
-
   var ss=0.086+pSpd*0.36;
   if(keys['ArrowLeft']||keys['a']||keys['A'])  RICK.position.x=Math.max(-RW/2+0.9,RICK.position.x-ss);
   if(keys['ArrowRight']||keys['d']||keys['D']) RICK.position.x=Math.min(RW/2-0.9,RICK.position.x+ss);
-
   var tl=(keys['ArrowLeft']||keys['a']||keys['A'])?0.07:(keys['ArrowRight']||keys['d']||keys['D'])?-0.07:0;
   RICK.rotation.z+=(tl-RICK.rotation.z)*0.12;
-
   RICK.position.z-=pSpd;dist+=pSpd;
   score=Math.floor(dist*4+fare*10);
-
   if(inv<=0&&sig.phase==='red'&&pSpd>0.06){
     var dz2=RICK.position.z-sig.group.position.z;
     if(dz2<-0.4&&dz2>-3.8){
@@ -1069,22 +952,16 @@ function mainLoop(){
       flashScreen('rgba(239,68,68,.35)');toast('🚦 Red light! -150 pts','#fca5a5');
     }
   }
-
   CAM.position.x+=(RICK.position.x*0.24-CAM.position.x)*0.07;
   CAM.position.y=5.3;CAM.position.z=RICK.position.z+11;
   CAM.lookAt(RICK.position.x*0.18,0.3,RICK.position.z-9);
-
   roadTiles.forEach(function(t){if(t.position.z-RICK.position.z>TILE*2.6) t.position.z-=NT*TILE;});
   buildMeshes.forEach(function(b){if(b.position.z-RICK.position.z>50) b.position.z-=182;});
-
   tT+=dt;if(tT>tI){tT=0;tI=rn(2.2,4.8);spawnT(false);}
   oT+=dt;if(oT>oI){oT=0;oI=rn(1.8,4.0);spawnO(false);}
   pT+=dt;if(pT>pI){pT=0;pI=rn(4,9);spawnP();}
   mSpawnT+=dt;if(!mission&&mSpawnT>1.5){mSpawnT=0;spawnMission();}
-
   if(inv>0) inv-=dt;
-
-  // same-dir traffic
   for(var i=tPool.length-1;i>=0;i--){
     var v=tPool[i];
     var ts=v.bs*vehSigBrake(v.mesh.position.z,false);
@@ -1100,8 +977,6 @@ function mainLoop(){
     if(v.mesh.position.z>RICK.position.z+NEAR){S.remove(v.mesh);tPool.splice(i,1);continue;}
     if(inv<=0&&hits(v.mesh.position.x,v.mesh.position.z,v.w,v.d)){doCrash();break;}
   }
-
-  // oncoming
   for(var i2=oPool.length-1;i2>=0;i2--){
     var ov2=oPool[i2];
     var os=ov2.spd*vehSigBrake(ov2.mesh.position.z,true);
@@ -1117,8 +992,6 @@ function mainLoop(){
     if(ov2.mesh.position.z>RICK.position.z+NEAR){S.remove(ov2.mesh);oPool.splice(i2,1);continue;}
     if(inv<=0&&hits(ov2.mesh.position.x,ov2.mesh.position.z,ov2.w,ov2.d)){doCrash();break;}
   }
-
-  // peds
   for(var i3=pPool.length-1;i3>=0;i3--){
     var p=pPool[i3];
     p.mesh.position.z+=p.spd+pSpd*0.12;
@@ -1126,10 +999,8 @@ function mainLoop(){
     if(p.mesh.position.z>RICK.position.z+NEAR){S.remove(p.mesh);pPool.splice(i3,1);continue;}
     if(inv<=0&&hits(p.mesh.position.x,p.mesh.position.z,p.w,p.d)){doCrash();break;}
   }
-
   var bob=Math.sin(totalT*2.8)*0.18;
   [pickM,dropM].forEach(function(mk){if(mk){mk.position.y=bob;mk.rotation.y+=0.022;}});
-
   checkMission();
   if(mission) updateMissionUI();
   updateHUD();drawSpeedo();drawMinimap();
